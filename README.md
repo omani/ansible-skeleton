@@ -21,6 +21,17 @@ Remove `.git` folder:
 rm -rf .git
 ```
 
+Encrypt vault file in `group_vars/all/vault`:
+```
+make vault-encrypt
+```
+
+Decrypt vault file in `group_vars/all/vault`:
+```
+make vault-decrypt
+```
+
+
 Now you can create your own git repo if needed.
 
 
