@@ -1,0 +1,23 @@
+---
+
+- hosts: all
+  become: yes
+  gather_facts: true
+  roles:
+  tasks:
+    - name: Update system
+      apt:
+        update_cache: yes
+        name: '*'
+        state: latest
+      tags: ['never', 'upgrade']
+    - name: Remove packages
+      apt:
+        name: "{{ remove_packages }}"
+        state: absent
+      tags: ['remove']
+    - name: Install packages
+      apt:
+        name: "{{ install_packages }}"
+        state: present
+      tags: ['install']

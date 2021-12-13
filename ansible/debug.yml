@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  become: yes
+  gather_facts: true
+  roles:
+  tasks:
+    - ping:
+    - debug:
+        msg: "{{ VAULT_ }}"

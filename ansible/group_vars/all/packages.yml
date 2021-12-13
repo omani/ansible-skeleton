@@ -1,0 +1,10 @@
+remove_packages: []
+
+install_packages:
+  - htop
+  - screen
+  - net-tools
+  - certbot
+  - python3-certbot-nginx
+  - docker.io
+  - docker-compose

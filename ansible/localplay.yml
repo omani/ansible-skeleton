@@ -1,0 +1,11 @@
+---
+
+- hosts: local
+  become: yes
+  gather_facts: true
+  roles:
+  tasks:
+    - debug:
+        msg: "{{ test }}"
+      no_log: false
+      tags: ['never', 'vars']
