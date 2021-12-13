@@ -2,11 +2,16 @@
 
 ## Install
 ```
-mkdir my-new-project; cd my-new-project
 git clone https://github.com/omani/ansible-skeleton
 ```
 
-Switch to newly created folder and create `.env` file for ansible-vault functionality:
+Rename to your project:
+```
+mv ansible-skeleton my-project
+cd my-project
+```
+
+Create `.env` file for ansible-vault functionality:
 ```
 PASS=`./gen_pass.sh` ; echo "VAULT_PASSWORD=${PASS}" > .env
 ```
