@@ -2,19 +2,14 @@
 
 ## Install
 ```
+mkdir my-new-project
 git clone https://github.com/omani/ansible-skeleton my-new-project
 ```
 
-## Dependencies
-Place a file named `.env` in root directory of this repo with the key `VAULT_PASSWORD` and a desired password.
+Switch to newly created folder and run:
 ```
-$ ./gen_pass.sh 
-uOo0cMp05mhDPWFtDa3P646r2IyEN7Q
-```
-
-Put output of `gen_pass.sh` in `.env`:
-```
-VAULT_PASSWORD=uOo0cMp05mhDPWFtDa3P646r2IyEN7Q
+PASS=`./gen_pass.sh` ; echo "VAULT_PASSWORD=${PASS}" > .env
+rm -rf .git
 ```
 
 ## Important
