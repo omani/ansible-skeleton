@@ -2,7 +2,7 @@
 
 ## Install
 ```
-git clone github.com/omani/ansible-skeleton my-new-project
+git clone https://github.com/omani/ansible-skeleton my-new-project
 ```
 
 ## Dependencies
